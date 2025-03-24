@@ -3,9 +3,8 @@ import axios from "axios";
 import { FaTrashAlt } from "react-icons/fa";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api/projects";
+const API_URL = process.env.REACT_APP_API_URL;
 
-function App() {
   const [projects, setProjects] = useState([]);
   const [projectName, setProjectName] = useState("");
   const [error, setError] = useState("");
